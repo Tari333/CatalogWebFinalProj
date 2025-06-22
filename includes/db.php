@@ -205,7 +205,7 @@ function setupDatabase() {
     if ($result['count'] == 0) {
         $buyerPassword = md5('buyer123');
         $db->query("INSERT INTO users (username, email, password, full_name, phone, address, role, status) VALUES (:username, :email, :password, :full_name, :phone, :address, :role, :status)");
-        $db->bind(':username', 'buyer@demo.com');
+        $db->bind(':username', 'buyer');
         $db->bind(':email', 'buyer@demo.com');
         $db->bind(':password', $buyerPassword);
         $db->bind(':full_name', 'Demo Buyer');
